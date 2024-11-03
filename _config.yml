@@ -41,6 +41,8 @@ navbar:
     title: About
   - slug : blog
     title: Blog
+  - slug : publications
+    tile : Publications
 
 exclude:
   - "gulp"
