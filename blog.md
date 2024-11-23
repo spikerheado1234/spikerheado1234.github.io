@@ -7,3 +7,4 @@ permalink: /blog/
 
 Insert posts here for the blog.
 
+
