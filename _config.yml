@@ -39,10 +39,10 @@ plugins:
 navbar:
   - slug : about
     title: About
-  - slug : blog
-    title: Blog
   - slug : publications
     tile : Publications
+  - slug : blog
+    title: Blog
 
 exclude:
   - "gulp"
