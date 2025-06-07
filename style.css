@@ -1,0 +1,327 @@
+/* style.css */
+
+/* === BASIC RESET & GLOBAL FONT === */
+body, h1, h2, h3, p, ul, li, a, button, input, textarea, code, pre, table, th, td {
+    margin: 0;
+    padding: 0;
+    font-family: "Overpass Mono", monospace;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    color: #333; /* Default text color */
+    line-height: 1.6; /* Global line-height, can be overridden */
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px; /* Default container width for all sections */
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* === HEADER & NAVIGATION === */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.site-title {
+    font-size: 1.8em;
+    font-weight: 400; /* Regular weight */
+    color: #000;
+}
+
+.site-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.site-nav li {
+    margin-left: 25px; /* Spacing between nav items */
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: #00A0B0; /* Light blue link color */
+    font-size: 0.95em;
+    font-weight: 400; /* Regular weight for nav links */
+}
+
+.site-nav a:hover {
+    text-decoration: underline;
+}
+
+/* === GENERAL CONTENT STYLING === */
+main {
+    font-size: 1em; /* Base for em calculations if not overridden */
+}
+
+/* Default paragraph styling (primarily for "About Me" section now) */
+p {
+    font-size: 1.375rem; /* ~22px, for About Me */
+    font-weight: 300;    /* Light weight */
+    margin-bottom: 1.2em; /* Margin relative to this font size */
+}
+
+/* Default link styling for "About Me" section */
+#about-me a {
+    color: #00A0B0;
+    text-decoration: none;
+    font-weight: 400; /* Regular weight for links */
+}
+#about-me a:hover {
+    text-decoration: underline;
+}
+
+/* Default list styling for "About Me" section */
+#about-me ul, #about-me ol {
+    margin-left: 20px;
+    margin-bottom: 1em;
+    font-size: 1.375rem; /* Match paragraph size */
+    padding-left: 1.5em;
+}
+#about-me li {
+    margin-bottom: 0.5em;
+}
+
+
+/* === SECTION VISIBILITY === */
+.content-section {
+    display: none; /* Hide all sections by default */
+    margin-bottom: 30px;
+}
+
+.content-section.active-section {
+    display: block; /* Show only the active section */
+}
+
+
+/* === BLOG POST LIST SECTION STYLING === */
+#blog-list-section h2 {
+    font-size: 1.8em;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 1em;
+}
+
+#blog-list-section ul#blog-posts-ul {
+    list-style: none;
+}
+
+#blog-list-section ul#blog-posts-ul li {
+    margin-bottom: 0.8em;
+}
+
+#blog-list-section ul#blog-posts-ul li a {
+    text-decoration: none;
+    color: #00A0B0;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+#blog-list-section ul#blog-posts-ul li a:hover {
+    text-decoration: underline;
+}
+
+#blog-list-section ul#blog-posts-ul .post-date {
+    font-size: 0.85em;
+    color: #777;
+    margin-left: 10px;
+    font-weight: 300;
+}
+
+
+/* === STYLING FOR BLOG-LIKE CONTENT (APPLIES TO BLOG POSTS & PUBLICATIONS SECTION) === */
+/* Grouping selectors for common blog-like styling */
+#blog-post-content,
+#publications-section {
+    line-height: 1.6; /* Comfortable line height */
+}
+
+/* Paragraphs within blog-like sections */
+#blog-post-content p,
+#publications-section p {
+    font-size: 1.05rem;  /* ~16.8px, standard blog text size */
+    font-weight: 300;
+    margin-bottom: 1em;
+}
+
+/* Headings within blog-like sections */
+#blog-post-content h1, #publications-section h1, /* Assuming h1 might be used in publications */
+#blog-post-content h2, #publications-section h2,
+#blog-post-content h3, #publications-section h3 {
+    color: #333;
+    font-weight: 700; /* Bold */
+    line-height: 1.3;
+}
+#blog-post-content h1, #publications-section h1 {
+    font-size: 1.8em;
+    margin-top: 1.6em;
+    margin-bottom: 0.7em;
+}
+#blog-post-content h2, #publications-section h2 { /* Publications section uses h2 by default */
+    font-size: 1.5em;
+    margin-top: 1.5em;
+    margin-bottom: 0.6em;
+}
+#blog-post-content h3, #publications-section h3 {
+    font-size: 1.25em;
+    margin-top: 1.4em;
+    margin-bottom: 0.5em;
+}
+
+/* Links within blog-like sections */
+#blog-post-content a,
+#publications-section a {
+    color: #00A0B0;
+    text-decoration: none;
+    font-weight: 400;
+}
+#blog-post-content a:hover,
+#publications-section a:hover {
+    text-decoration: underline;
+}
+
+/* Lists within blog-like sections */
+#blog-post-content ul, #blog-post-content ol,
+#publications-section ul, #publications-section ol {
+    margin-left: 20px;
+    margin-bottom: 1em;
+    font-size: 1.05rem; /* Match paragraph font size */
+    font-weight: 300;
+    padding-left: 1.5em;
+}
+#blog-post-content ul li, #blog-post-content ol li,
+#publications-section ul li, #publications-section ol li {
+    margin-bottom: 0.4em;
+    line-height: 1.55;
+}
+
+/* Blockquotes within blog-like sections */
+#blog-post-content blockquote,
+#publications-section blockquote {
+    border-left: 3px solid #ccc;
+    padding: 0.5em 15px;
+    margin: 1em 0;
+    color: #555;
+    font-style: italic;
+    font-size: 1.05rem;
+    font-weight: 300;
+}
+#blog-post-content blockquote p,
+#publications-section blockquote p {
+    font-size: 1em;
+    margin-bottom: 0.3em;
+    line-height: 1.5;
+}
+
+/* Code styling within blog-like sections */
+#blog-post-content code, #blog-post-content pre,
+#publications-section code, #publications-section pre {
+    font-family: "Overpass Mono", monospace;
+    background-color: #f0f0f0;
+    border-radius: 3px;
+    font-weight: 400;
+    color: #333;
+}
+#blog-post-content code,
+#publications-section code { /* Inline code specifically */
+    padding: 0.15em 0.3em;
+    font-size: 0.88em;
+}
+#blog-post-content pre,
+#publications-section pre { /* Code blocks specifically */
+    padding: 10px 12px;
+    overflow-x: auto;
+    margin: 1.2em 0;
+    font-size: 0.9rem;
+    line-height: 1.45;
+    border: 1px solid #e0e0e0;
+}
+#blog-post-content pre code,
+#publications-section pre code { /* Code inside a pre block */
+    background-color: transparent;
+    padding: 0;
+    font-size: 1em;
+    border: none;
+    border-radius: 0;
+}
+
+/* Tables within blog-like sections */
+#blog-post-content table,
+#publications-section table {
+    width: auto;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em 0;
+    font-size: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid #ddd;
+}
+#blog-post-content th, #blog-post-content td,
+#publications-section th, #publications-section td {
+    border: 1px solid #ddd;
+    padding: 8px 10px;
+    text-align: left;
+    line-height: 1.4;
+}
+#blog-post-content th,
+#publications-section th {
+    background-color: #f9f9f9;
+    font-weight: 700;
+    color: #333;
+    white-space: nowrap;
+}
+#blog-post-content tbody tr:nth-of-type(even),
+#publications-section tbody tr:nth-of-type(even) {
+    background-color: #fdfdfd;
+}
+#blog-post-content tbody tr:nth-of-type(odd),
+#publications-section tbody tr:nth-of-type(odd) {
+    background-color: #ffffff;
+}
+#blog-post-content tbody tr:hover,
+#publications-section tbody tr:hover {
+    background-color: #f0f5ff;
+}
+
+/* Images within blog-like sections */
+#blog-post-content img,
+#publications-section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5em auto;
+    border: 1px solid #ddd;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+/* Button to go back to blog list (only in blog post section) */
+#blog-post-section #back-to-blog-list {
+    background-color: #00A0B0;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 0.9em;
+    font-weight: 400;
+}
+#blog-post-section #back-to-blog-list:hover {
+    background-color: #007f8c;
+}
+
+/* KaTeX specific styling */
+.katex-display {
+    margin: 1em 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
