@@ -57,7 +57,7 @@ body {
     text-decoration: underline;
 }
 
-/* === GENERAL CONTENT STYLING === */
+/* === GENERAL TYPOGRAPHY & SEMANTIC ELEMENTS === */
 main {
     font-size: 1em; /* Base for em calculations if not overridden */
 }
@@ -67,6 +67,12 @@ p {
     font-size: 1.375rem; /* ~22px, for About Me */
     font-weight: 300;    /* Light weight */
     margin-bottom: 1.2em; /* Margin relative to this font size */
+    line-height: 1.6; /* Explicit line-height for these paragraphs */
+}
+
+/* Ensure strong and b tags are bold */
+strong, b {
+    font-weight: 700; /* Use 700 weight for bold, ensure it's loaded */
 }
 
 /* Default link styling for "About Me" section */
@@ -85,6 +91,7 @@ p {
     margin-bottom: 1em;
     font-size: 1.375rem; /* Match paragraph size */
     padding-left: 1.5em;
+    line-height: 1.6;
 }
 #about-me li {
     margin-bottom: 0.5em;
@@ -138,22 +145,22 @@ p {
 
 
 /* === STYLING FOR BLOG-LIKE CONTENT (APPLIES TO BLOG POSTS & PUBLICATIONS SECTION) === */
-/* Grouping selectors for common blog-like styling */
 #blog-post-content,
 #publications-section {
-    line-height: 1.6; /* Comfortable line height */
+    line-height: 1.6; /* Base line height for these sections */
 }
 
 /* Paragraphs within blog-like sections */
 #blog-post-content p,
 #publications-section p {
-    font-size: 1.05rem;  /* ~16.8px, standard blog text size */
+    font-size: 1.05rem;
     font-weight: 300;
     margin-bottom: 1em;
+    line-height: 1.5; /* Slightly tighter line-height for blog text */
 }
 
 /* Headings within blog-like sections */
-#blog-post-content h1, #publications-section h1, /* Assuming h1 might be used in publications */
+#blog-post-content h1, #publications-section h1,
 #blog-post-content h2, #publications-section h2,
 #blog-post-content h3, #publications-section h3 {
     color: #333;
@@ -165,7 +172,7 @@ p {
     margin-top: 1.6em;
     margin-bottom: 0.7em;
 }
-#blog-post-content h2, #publications-section h2 { /* Publications section uses h2 by default */
+#blog-post-content h2, #publications-section h2 {
     font-size: 1.5em;
     margin-top: 1.5em;
     margin-bottom: 0.6em;
@@ -181,7 +188,7 @@ p {
 #publications-section a {
     color: #00A0B0;
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 400; /* Links are regular weight to stand out from light paragraph text */
 }
 #blog-post-content a:hover,
 #publications-section a:hover {
@@ -196,11 +203,12 @@ p {
     font-size: 1.05rem; /* Match paragraph font size */
     font-weight: 300;
     padding-left: 1.5em;
+    line-height: 1.5; /* Line height for list container */
 }
 #blog-post-content ul li, #blog-post-content ol li,
 #publications-section ul li, #publications-section ol li {
     margin-bottom: 0.4em;
-    line-height: 1.55;
+    /* line-height is inherited, can be overridden if needed: line-height: 1.5; */
 }
 
 /* Blockquotes within blog-like sections */
@@ -213,12 +221,13 @@ p {
     font-style: italic;
     font-size: 1.05rem;
     font-weight: 300;
+    line-height: 1.5;
 }
 #blog-post-content blockquote p,
 #publications-section blockquote p {
-    font-size: 1em;
+    font-size: 1em; /* Inherit blockquote's font size */
     margin-bottom: 0.3em;
-    line-height: 1.5;
+    /* line-height is inherited from blockquote */
 }
 
 /* Code styling within blog-like sections */
@@ -227,20 +236,20 @@ p {
     font-family: "Overpass Mono", monospace;
     background-color: #f0f0f0;
     border-radius: 3px;
-    font-weight: 400;
+    font-weight: 400; /* Regular weight for code */
     color: #333;
 }
 #blog-post-content code,
 #publications-section code { /* Inline code specifically */
     padding: 0.15em 0.3em;
-    font-size: 0.88em;
+    font-size: 0.88em;  /* Slightly smaller than surrounding text */
 }
 #blog-post-content pre,
 #publications-section pre { /* Code blocks specifically */
     padding: 10px 12px;
     overflow-x: auto;
     margin: 1.2em 0;
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Slightly smaller than main blog text */
     line-height: 1.45;
     border: 1px solid #e0e0e0;
 }
@@ -248,7 +257,7 @@ p {
 #publications-section pre code { /* Code inside a pre block */
     background-color: transparent;
     padding: 0;
-    font-size: 1em;
+    font-size: 1em; /* Inherit pre's font size */
     border: none;
     border-radius: 0;
 }
@@ -256,10 +265,12 @@ p {
 /* Tables within blog-like sections */
 #blog-post-content table,
 #publications-section table {
-    width: auto;
     max-width: 100%;
     border-collapse: collapse;
-    margin: 1.5em 0;
+    margin-left: auto;   /* Center table */
+    margin-right: auto;  /* Center table */
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
     font-size: 0.9rem;
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     border: 1px solid #ddd;
@@ -320,8 +331,8 @@ p {
 }
 
 /* KaTeX specific styling */
-.katex-display {
+.katex-display { /* For display math $$...$$ */
     margin: 1em 0;
-    overflow-x: auto;
+    overflow-x: auto; /* Allow scrolling for very wide equations */
     overflow-y: hidden;
 }
