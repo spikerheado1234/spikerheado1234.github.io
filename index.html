@@ -1,109 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahan Gupta</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ahan Gupta</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;700&display=swap" rel="stylesheet">
 
         <!-- KaTeX CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
 
 
-    <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css">
 
-    <!-- KaTeX JS (core) -->
+        <!-- KaTeX JS (core) -->
         <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" integrity="sha384-cMkvdD8LoxVzGF/RPUKAcvmm49FQ0oxwDF3BGKtDXcEc+T1b2N+teh/OJfpU0jr6" crossorigin="anonymous"></script>
 
-    <!-- KaTeX auto-render extension -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
+        <!-- KaTeX auto-render extension -->
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
+                                                                                                                                                                                           onload="renderMathInElement(document.body);"></script>
 
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-    <script>
-        window.ALL_BLOG_POSTS_DATA = [];
-        function _registerBlogPost(postData) {
-            window.ALL_BLOG_POSTS_DATA.push(postData);
-        }
-    </script>
-</head>
-<body>
-    <div class="container">
-        <header class="site-header">
-            <h1 class="site-title">Ahan Gupta</h1>
-            <nav class="site-nav">
-                <ul>
-                    <li><a href="#about" id="nav-about">About me</a></li>
-                    <li><a href="#publications" id="nav-publications">Publications</a></li> 
-                    <li><a href="#blog" id="nav-blog">Blog</a></li>
-                </ul>
-            </nav>
-        </header>
+        <script>
+            window.ALL_BLOG_POSTS_DATA = [];
+            function _registerBlogPost(postData) {
+                window.ALL_BLOG_POSTS_DATA.push(postData);
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <header class="site-header">
+                <h1 class="site-title">Ahan Gupta</h1>
+                <nav class="site-nav">
+                    <ul>
+                        <li><a href="#about" id="nav-about">About me</a></li>
+                        <li><a href="#publications" id="nav-publications">Publications</a></li> 
+                        <li><a href="#blog" id="nav-blog">Blog</a></li>
+                    </ul>
+                </nav>
+            </header>
 
-        <main id="main-content">
-            <section id="about-me" class="content-section active-section">
-                <p>
+            <main id="main-content">
+                <section id="about-me" class="content-section active-section">
+                    <p>
                     Hi, I'm Ahan Gupta, a computer science PhD student at
                     UIUC who is lucky to be advised by the great <a href="https://minjiazhang.github.io/">Minjia Zhang</a>! Broadly, I investigate high-performance machine
                     learning from the perspective of compilers/systems and
-                    algorithms. Check out my <a href="#publications">publications</a> for my latest
-                    work.
-                </p>
-                <p>
+                    algorithms. 
+                    </p>
+
+                    <p>
+                    My work has been published at various top-tier venues 
+                    (ICLR, SC, ISC, OSDI, and OOSPSLA to name a few), adopted by 
+                    industrial systems (OpenFold3 by AMD, and DeepSpeed by Microsoft), 
+                    and has culminated in a best student-paper award (at SC'25). For more information on my latest work,
+                    check out my <a href="#publications">publications</a>.
+                    </p>
+
+                    <p>
                     In the not so distant past, I have worked as a
                     researcher at <a href="https://deepmind.google/" target="_blank">Google DeepMind</a> (Mountain View 2024), as
                     well as a software engineer at <a href="https://www.citadel.com/" target="_blank">Citadel</a> (Hong Kong 2021)
                     and <a href="https://www.ninjavan.co/" target="_blank">Ninja-van</a> (Singapore 2018). For more information,
                     feel free to look at my <a href="cv.pdf" target="_blank">cv</a>.
-                </p>
-            </section>
+                    </p>
+                </section>
 
-            <section id="publications-section" class="content-section">
-                <p>
+                <section id="publications-section" class="content-section">
+                    <p>
                     A (relatively) up to date list of my publications.
-                </p>
-                <p>
-                Muyan Hu, <strong>Ahan Gupta</strong>, Jiachen Yuan, Vima Gupta, Taeksang Kim, Xin Xu, Janardhan Kulkarn, Ofer Dekel, Vikram Adve, Charith Mendis. VTC: DNN Compilation with Virtual Tensors for Data Movement Elimination. OSDI 2026.
-                </p>
-                <p>
-                Hoa La*, <strong>Ahan Gupta</strong>*, Alex Morehead, Jianlin Cheng, Minjia Zhang. MegaFold: System-Level Optimizations for Accelerating Protein Structure Prediction Models. ISC 2026.
-                <span style="color: red; font-weight: bold;">Kernels adopted by AMD for OpenFold3!</span> 
-                </p>
-                <p>
-                <strong>Ahan Gupta</strong>*, Zhihao Wang*, Neel Dani, Masahiro Tanaka, Olatunji Ruwase, Minjia Zhang. <a href="https://openreview.net/pdf?id=0fgsHvmBBI" target="_blank">AutoSP: Unlocking Long-Context LLM Training Via Compiler-Based Sequence Parallelism</a>. ICLR 2026. <span style="color: red; font-weight: bold;">Adopted by DeepSpeed! </span>
-                </p>
-                <p>
-                Yueming Yuan, <strong>Ahan Gupta</strong>, Jianping Li, Sajal Dash, Feiyi Wang, Minjia Zhang. <a href="https://dl.acm.org/doi/10.1145/3712285.3759886" target="_blank">X-MoE: Enabling Scalable Training for Emerging Mixture-of-Experts Architectures on HPC Platforms</a>. SC 2025. <span style="color: red; font-weight: bold;">Best Student Paper! </span>
-                </p>
-                <p>
-                <strong>Ahan Gupta</strong>, Yueming Yuan, Devansh Jain, Yuhao Ge, David Aponte, Yanqi Zhou, Charith Mendis. <a href="https://dl.acm.org/doi/10.1145/3720503" target="_blank">SPLAT: A framework for optimised GPU code-generation for SParse reguLar ATtention</a>. OOPSLA 2025.
-                </p>
-                <p>
-                Davis Wertheimer*, Haochen Shen*, <strong>Ahan Gupta</strong>*, Derrick Liu, Yu Chin Fabian Lim, Mudhakar Srivatsa, Raghu K Ganti, Minjia Zhang, Naigang Wang. A Self-Pruning Transformer: Extreme KV-Cache Compression with Universal Attention. In Submission.
-                </p>
-                <p>
-                <strong>Ahan Gupta</strong>, Hao Guo, Yueming Yuan, Yanqi Zhou, Charith Mendis. FLuRKA: Fast fused Low-Rank & Kernel Attention. In Submission.
-                </p>
-                <p>* Denotes equal contribution.</p>
-            </section>
+                    </p>
+                    <p>
+                    Muyan Hu, <strong>Ahan Gupta</strong>, Jiachen Yuan, Vima Gupta, Taeksang Kim, Xin Xu, Janardhan Kulkarn, Ofer Dekel, Vikram Adve, Charith Mendis. VTC: DNN Compilation with Virtual Tensors for Data Movement Elimination. OSDI 2026.
+                    </p>
+                    <p>
+                    Hoa La*, <strong>Ahan Gupta</strong>*, Alex Morehead, Jianlin Cheng, Minjia Zhang. MegaFold: System-Level Optimizations for Accelerating Protein Structure Prediction Models. ISC 2026.
+                    <span style="color: red; font-weight: bold;">Kernels adopted by AMD for OpenFold3!</span> 
+                    </p>
+                    <p>
+                    <strong>Ahan Gupta</strong>*, Zhihao Wang*, Neel Dani, Masahiro Tanaka, Olatunji Ruwase, Minjia Zhang. <a href="https://openreview.net/pdf?id=0fgsHvmBBI" target="_blank">AutoSP: Unlocking Long-Context LLM Training Via Compiler-Based Sequence Parallelism</a>. ICLR 2026. <span style="color: red; font-weight: bold;">Adopted by DeepSpeed! </span>
+                    </p>
+                    <p>
+                    Yueming Yuan, <strong>Ahan Gupta</strong>, Jianping Li, Sajal Dash, Feiyi Wang, Minjia Zhang. <a href="https://dl.acm.org/doi/10.1145/3712285.3759886" target="_blank">X-MoE: Enabling Scalable Training for Emerging Mixture-of-Experts Architectures on HPC Platforms</a>. SC 2025. <span style="color: red; font-weight: bold;">Best Student Paper! </span>
+                    </p>
+                    <p>
+                    <strong>Ahan Gupta</strong>, Yueming Yuan, Devansh Jain, Yuhao Ge, David Aponte, Yanqi Zhou, Charith Mendis. <a href="https://dl.acm.org/doi/10.1145/3720503" target="_blank">SPLAT: A framework for optimised GPU code-generation for SParse reguLar ATtention</a>. OOPSLA 2025.
+                    </p>
+                    <p>
+                    Davis Wertheimer*, Haochen Shen*, <strong>Ahan Gupta</strong>*, Derrick Liu, Yu Chin Fabian Lim, Mudhakar Srivatsa, Raghu K Ganti, Minjia Zhang, Naigang Wang. A Self-Pruning Transformer: Extreme KV-Cache Compression with Universal Attention. In Submission.
+                    </p>
+                    <p>
+                    <strong>Ahan Gupta</strong>, Hao Guo, Yueming Yuan, Yanqi Zhou, Charith Mendis. FLuRKA: Fast fused Low-Rank & Kernel Attention. In Submission.
+                    </p>
+                    <p>* Denotes equal contribution.</p>
+                </section>
 
-            <section id="blog-list-section" class="content-section">
-                <ul id="blog-posts-ul"></ul>
-            </section>
+                <section id="blog-list-section" class="content-section">
+                    <ul id="blog-posts-ul"></ul>
+                </section>
 
-            <section id="blog-post-section" class="content-section">
-                <button id="back-to-blog-list">← Back to Blog List</button>
-                <div id="blog-post-content"></div>
-            </section>
-        </main>
-    </div>
+                <section id="blog-post-section" class="content-section">
+                    <button id="back-to-blog-list">← Back to Blog List</button>
+                    <div id="blog-post-content"></div>
+                </section>
+            </main>
+        </div>
 
-    <script src="posts/jacobian_intro.js"></script>
-    <script src="script.js"></script>
-</body>
+        <script src="posts/jacobian_intro.js"></script>
+        <script src="script.js"></script>
+    </body>
 </html>
