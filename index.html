@@ -1,118 +1,128 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ahan Gupta</title>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Ahan Gupta</title>
+    <meta name="description" content="Computer Science PhD student at UIUC working on compilers and systems for high-performance machine learning.">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap & MDB -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css">
 
-        <!-- KaTeX CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
+    <!-- al-folio main styles -->
+    <link rel="stylesheet" href="assets/css/main.css">
 
-        <link rel="stylesheet" href="style.css">
+    <!-- Theme toggle (must be in head to prevent flicker) -->
+    <script src="assets/js/theme.js"></script>
+  </head>
 
-        <!-- KaTeX JS (core) -->
-        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" integrity="sha384-cMkvdD8LoxVzGF/RPUKAcvmm49FQ0oxwDF3BGKtDXcEc+T1b2N+teh/OJfpU0jr6" crossorigin="anonymous"></script>
-
-        <!-- KaTeX auto-render extension -->
-        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
-                                                                                                                                                                                           onload="renderMathInElement(document.body);"></script>
-
-        <link rel="stylesheet" href="style.css">
-        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
-        <script>
-            window.ALL_BLOG_POSTS_DATA = [];
-            function _registerBlogPost(postData) {
-                window.ALL_BLOG_POSTS_DATA.push(postData);
-            }
-        </script>
-    </head>
-    <body>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm sticky-top" role="navigation">
         <div class="container">
-            <header class="site-header">
-                <h1 class="site-title">Ahan Gupta</h1>
-                <nav class="site-nav">
-                    <ul>
-                        <li><a href="#about" id="nav-about">About me</a></li>
-                        <li><a href="#publications" id="nav-publications">Publications</a></li> 
-                        <li><a href="#blog" id="nav-blog">Blog</a></li>
-                    </ul>
-                </nav>
-            </header>
-
-            <main id="main-content">
-                <section id="about-me" class="content-section active-section">
-                    <p>
-                    Hi, I'm Ahan Gupta, a computer science PhD student at
-                    UIUC who is lucky to be advised by the great <a href="https://minjiazhang.github.io/">Minjia Zhang</a>! Broadly, I investigate high-performance machine
-                    learning from the perspective of compilers/systems and
-                    algorithms. 
-                    </p>
-
-                    <p>
-                    My work has been published at various top-tier venues 
-                    (ICLR, SC, ISC, OSDI, and OOPSLA to name a few), adopted by 
-                    major industrial systems (OpenFold3 by AMD, and DeepSpeed by Microsoft), 
-                    featured by PyTorch, and has culminated in a best student-paper award (at SC'25). 
-                    For more information on my latest work,
-                    check out my <a href="#publications">publications</a>.
-                    </p>
-
-                    <p>
-                    In the not so distant past, I have worked as a
-                    researcher at <a href="https://deepmind.google/" target="_blank">Google DeepMind</a> (Mountain View 2024), as
-                    well as a software engineer at <a href="https://www.citadel.com/" target="_blank">Citadel</a> (Hong Kong 2021)
-                    and <a href="https://www.ninjavan.co/" target="_blank">Ninja-van</a> (Singapore 2018). For more information,
-                    feel free to look at my <a href="cv.pdf" target="_blank">cv</a>.
-                    </p>
-                </section>
-
-                <section id="publications-section" class="content-section">
-                    <p>
-                    A (relatively) up to date list of my publications.
-                    </p>
-                    <p>
-                    Muyan Hu, <strong>Ahan Gupta</strong>, Jiachen Yuan, Vima Gupta, Taeksang Kim, Xin Xu, Janardhan Kulkarn, Ofer Dekel, Vikram Adve, Charith Mendis. VTC: DNN Compilation with Virtual Tensors for Data Movement Elimination. OSDI 2026.
-                    </p>
-                    <p>
-                    Hoa La*, <strong>Ahan Gupta</strong>*, Alex Morehead, Jianlin Cheng, Minjia Zhang. MegaFold: System-Level Optimizations for Accelerating Protein Structure Prediction Models. ISC 2026.
-                    <span style="color: red; font-weight: bold;">Kernels adopted by AMD for OpenFold3!</span> 
-                    </p>
-                    <p>
-                    <strong>Ahan Gupta</strong>*, Zhihao Wang*, Neel Dani, Masahiro Tanaka, Olatunji Ruwase, Minjia Zhang. <a href="https://openreview.net/pdf?id=0fgsHvmBBI" target="_blank">AutoSP: Unlocking Long-Context LLM Training Via Compiler-Based Sequence Parallelism</a>. ICLR 2026. <span style="color: red; font-weight: bold;">Adopted by DeepSpeed! Featured by PyTorch Foundation Blog! </span>
-                    </p>
-                    <p>
-                    Yueming Yuan, <strong>Ahan Gupta</strong>, Jianping Li, Sajal Dash, Feiyi Wang, Minjia Zhang. <a href="https://dl.acm.org/doi/10.1145/3712285.3759886" target="_blank">X-MoE: Enabling Scalable Training for Emerging Mixture-of-Experts Architectures on HPC Platforms</a>. SC 2025. <span style="color: red; font-weight: bold;">Best Student Paper! </span>
-                    </p>
-                    <p>
-                    <strong>Ahan Gupta</strong>, Yueming Yuan, Devansh Jain, Yuhao Ge, David Aponte, Yanqi Zhou, Charith Mendis. <a href="https://dl.acm.org/doi/10.1145/3720503" target="_blank">SPLAT: A framework for optimised GPU code-generation for SParse reguLar ATtention</a>. OOPSLA 2025.
-                    </p>
-                    <p>
-                    Davis Wertheimer*, Haochen Shen*, <strong>Ahan Gupta</strong>*, Derrick Liu, Yu Chin Fabian Lim, Mudhakar Srivatsa, Raghu K Ganti, Minjia Zhang, Naigang Wang. A Self-Pruning Transformer: Extreme KV-Cache Compression with Universal Attention. In Submission.
-                    </p>
-                    <p>
-                    <strong>Ahan Gupta</strong>, Hao Guo, Yueming Yuan, Yanqi Zhou, Charith Mendis. FLuRKA: Fast fused Low-Rank & Kernel Attention. In Submission.
-                    </p>
-                    <p>* Denotes equal contribution.</p>
-                </section>
-
-                <section id="blog-list-section" class="content-section">
-                    <ul id="blog-posts-ul"></ul>
-                </section>
-
-                <section id="blog-post-section" class="content-section">
-                    <button id="back-to-blog-list">← Back to Blog List</button>
-                    <div id="blog-post-content"></div>
-                </section>
-            </main>
+          <a class="navbar-brand title font-weight-lighter" href="index.html">
+            <span class="font-weight-bold">Ahan</span>&nbsp;Gupta
+          </a>
+          <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">About<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="publications.html">Publications</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://spikerheado1234.github.io/cv.pdf" target="_blank" rel="noopener">CV</a>
+              </li>
+              <li class="toggle-container">
+                <button id="light-toggle" title="Change theme">
+                  <i class="fa-half-sun-moon" id="light-toggle-system"></i>
+                  <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
+                  <i class="fa-solid fa-sun" id="light-toggle-light"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
+      </nav>
+    </header>
 
-        <script src="posts/jacobian_intro.js"></script>
-        <script src="script.js"></script>
-    </body>
+    <!-- Content -->
+    <div class="container mt-5" role="main">
+      <div class="post">
+        <header class="post-header">
+          <h1 class="post-title">
+            <span class="font-weight-bold">Ahan</span>&nbsp;Gupta
+          </h1>
+          <p class="desc">CS PhD Student · UIUC · Compilers &amp; Systems for ML</p>
+        </header>
+
+        <article>
+          <div class="profile float-right">
+            <img class="img-fluid z-depth-1 rounded-circle" src="assets/img/prof_pic.jpg" alt="Ahan Gupta">
+            <div class="more-info">
+              <p>Thomas M. Siebel Center<br>
+              for Computer Science<br>
+              201 N. Goodwin Ave<br>
+              Urbana, IL 61801</p>
+            </div>
+          </div>
+
+          <div class="clearfix">
+            <p>
+              Hi, I'm Ahan Gupta, a computer science PhD student at UIUC who is lucky to be advised
+              by the great <a href="https://minjiazhang.github.io/" target="_blank" rel="noopener">Minjia Zhang</a>!
+              Broadly, I investigate high-performance machine learning from the perspective of
+              compilers/systems and algorithms.
+            </p>
+
+            <p>
+              My work has been published at various top-tier venues (ICLR, SC, ISC, OSDI, and OOPSLA
+              to name a few), adopted by major industrial systems (OpenFold3 by AMD, and DeepSpeed by
+              Microsoft), featured by PyTorch, and has culminated in a best student-paper award (at SC'25).
+              For more information on my latest work, check out my
+              <a href="publications.html">Publications</a>.
+            </p>
+
+            <p>
+              In the not so distant past, I have worked as a researcher at
+              <a href="https://deepmind.google/" target="_blank" rel="noopener">Google DeepMind</a>
+              (Mountain View 2024), as well as a software engineer at
+              <a href="https://www.citadel.com/" target="_blank" rel="noopener">Citadel</a>
+              (Hong Kong 2021) and
+              <a href="https://www.ninjavan.co/" target="_blank" rel="noopener">Ninja-van</a>
+              (Singapore 2018). For more information, feel free to look at my
+              <a href="https://spikerheado1234.github.io/cv.pdf" target="_blank" rel="noopener">CV</a>.
+            </p>
+          </div>
+
+          <!-- Social -->
+          <div class="social">
+            <div class="contact-icons">
+              <a href="mailto:ahanrgupta@gmail.com" title="email"><i class="fa-solid fa-envelope"></i></a>
+              <a href="https://scholar.google.com/citations?user=9RkL8E4AAAAJ&hl=en" title="Google Scholar" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i><i class="fa-solid fa-graduation-cap"></i></a>
+              <a href="https://github.com/spikerheado1234" title="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.linkedin.com/" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </body>
 </html>
